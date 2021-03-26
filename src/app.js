@@ -1,27 +1,13 @@
-import { LightningElement } from "lwc";
+import { LightningElement } from 'lwc';
+import {
+    EXAMPLES_COLUMNS_DEFINITION_BASIC,
+    EXAMPLES_DATA_BASIC,
+} from './sampleData';
 
 export default class App extends LightningElement {
-  title = "Welcome to Lightning Web Components!";
+    // definition of columns for the tree grid
+    gridColumns = EXAMPLES_COLUMNS_DEFINITION_BASIC;
 
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
-  }
+    // data provided to the tree grid
+    gridData = EXAMPLES_DATA_BASIC;
 }
